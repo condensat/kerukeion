@@ -18,7 +18,7 @@ setup(
 
     extras_require={
         'dev': ['check-manifest'],
-        'test': ['coverage'],
+        'test': ['coverage, pytest', 'pyhamcrest'],
     },
 
     entry_points={

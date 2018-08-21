@@ -2,8 +2,6 @@ import uuid
 from enum import IntFlag, unique, auto
 from typing import NamedTuple
 
-from numpy.core import int64, int32
-
 
 class Order(NamedTuple):
 
@@ -13,9 +11,8 @@ class Order(NamedTuple):
         SELL = auto()
         CANCEL = auto()
 
-    timestamp: int64
+    timestamp: int
     type: Type
-    quantity: int32
-    price: int32
-    limit: int32 = -1
+    quantity: int
+    price: int = None
     id = uuid.uuid4()
